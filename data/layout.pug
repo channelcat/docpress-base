@@ -71,7 +71,7 @@ mixin header-nav
   .header-nav
     .right
       if meta.github
-        a.iconlink(href='https://github.com/' + meta.github, data-title=meta.github)
+        a.iconlink(href=((meta.github.startsWith('https://') || meta.github.startsWith('http://')) ? '' : 'https://github.com/') + meta.github, data-title=meta.github)
           // span.title Open in GitHub
           span.icon.-github
 
